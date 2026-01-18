@@ -1,14 +1,11 @@
-
 import { GoogleGenAI } from "@google/genai";
 
-const API_KEY = process.env.API_KEY || "";
-
 export const getTravelAdvice = async (userPrompt: string) => {
-  if (!API_KEY) {
+  if (!process.env.API_KEY) {
     return "I'm sorry, I'm currently unavailable. Please call our 24/7 support line at 87091 52518 for assistance.";
   }
 
-  const ai = new GoogleGenAI({ apiKey: API_KEY });
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
   try {
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
