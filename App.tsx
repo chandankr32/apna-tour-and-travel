@@ -64,7 +64,7 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* Services & Pricing Section - Added scroll-mt-24 for navigation accessibility */}
+      {/* Services & Pricing Section */}
       <section id="services" className="py-24 bg-[#F9F7F4] scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -195,12 +195,9 @@ const App: React.FC = () => {
               </div>
               <div className="hidden md:block">
                  <img 
-                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3r-fA-6YmN6-2Ff9G0mB0n7Yf8r-6-Y-7_7-6-Y-7_7-6-Y-7_7-6-Y-7_7-6-Y-7_7-6-Y-7_7" 
+                   src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=800" 
                    alt="Safe Driver"
                    className="rounded-[2rem] shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
-                   onError={(e) => {
-                     (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=800";
-                   }}
                  />
               </div>
             </div>
@@ -208,7 +205,7 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* Google Reviews Section - Added scroll-mt-24 */}
+      {/* Google Reviews Section */}
       <section id="testimonials" className="py-24 bg-white scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center mb-16 gap-8 text-center md:text-left">
@@ -267,7 +264,6 @@ const App: React.FC = () => {
              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 bg-[#EA2831] text-white px-12 py-6 rounded-[2rem] font-black text-lg shadow-2xl shadow-[#EA2831]/40 hover:scale-110 hover:-rotate-1 transition-all">
                CHAT ON WHATSAPP TO BOOK <span className="material-symbols-outlined text-2xl">chat</span>
              </a>
-             <p className="mt-6 text-gray-400 text-sm font-bold uppercase tracking-widest">Instant Quotes & 24/7 Availability</p>
           </div>
         </div>
       </section>
