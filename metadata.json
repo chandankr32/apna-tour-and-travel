@@ -1,0 +1,7 @@
+{
+  "name": "Apna Tour & Travel",
+  "description": "A premium car rental and travel agency application for Ranchi, featuring a professional fleet and AI-powered trip planning.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
