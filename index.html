@@ -55,6 +55,15 @@
         .animate-bounce-slow {
             animation: bounce-slow 3s infinite;
         }
+        #root:empty::before {
+            content: 'Loading Apna Travels...';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-weight: bold;
+            color: #EA2831;
+        }
     </style>
 <script type="importmap">
 {
@@ -69,5 +78,7 @@
 </head>
 <body class="bg-background-light text-[#1a110f] overflow-x-hidden">
     <div id="root"></div>
+    <!-- This script tag is essential to load the app code -->
+    <script type="module" src="index.tsx"></script>
 </body>
 </html>
