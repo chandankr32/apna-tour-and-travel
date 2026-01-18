@@ -12,7 +12,8 @@ const BookingForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert(`Thank you! Our team will contact you for your trip from ${formData.pickup} to ${formData.dropoff} on ${formData.date}.`);
+    const text = `Hi Apna Travels! I'd like to book a ${formData.vehicleType} from ${formData.pickup} to ${formData.dropoff} on ${formData.date}.`;
+    window.open(`https://wa.me/918709152518?text=${encodeURIComponent(text)}`, '_blank');
   };
 
   return (
@@ -71,20 +72,19 @@ const BookingForm: React.FC = () => {
                 onChange={(e) => setFormData({...formData, vehicleType: e.target.value})}
                 className="w-full pl-10 pr-4 py-3 bg-gray-50 rounded-lg border-transparent focus:bg-white focus:border-[#EA2831] focus:ring-0 text-sm font-medium transition-all appearance-none text-gray-600"
               >
+                <option>Maruti Ertiga</option>
+                <option>Toyota Innova Crysta</option>
+                <option>Tempo Traveller</option>
                 <option>Sedan (4 Seater)</option>
-                <option>Compact MPV (6 Seater)</option>
-                <option>Luxury SUV (7 Seater)</option>
-                <option>Tempo Traveller (12+1)</option>
               </select>
               <span className="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-xl pointer-events-none">expand_more</span>
             </div>
           </div>
         </div>
         <button type="submit" className="w-full mt-2 bg-[#EA2831] hover:bg-[#c91d24] text-white h-12 rounded-lg font-bold text-base shadow-lg shadow-[#EA2831]/20 transition-all transform active:scale-95 flex items-center justify-center gap-2">
-          <span>Get Estimate</span>
-          <span className="material-symbols-outlined text-lg">arrow_forward</span>
+          <span>Book via WhatsApp</span>
+          <span className="material-symbols-outlined text-lg">chat</span>
         </button>
-        <p className="text-center text-xs text-gray-400 font-medium">No credit card required for quote</p>
       </form>
     </div>
   );

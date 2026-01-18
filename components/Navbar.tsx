@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const whatsappUrl = "https://wa.me/918709152518?text=Hi! I'd like to book a car with Apna Tour & Travel.";
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-[#f2eae8] bg-[#fbf9f8]/95 backdrop-blur-sm">
@@ -17,11 +18,15 @@ const Navbar: React.FC = () => {
 
           <div className="hidden md:flex items-center gap-8">
             <a className="text-sm font-medium hover:text-[#EA2831] transition-colors" href="#services">Services</a>
-            <a className="text-sm font-medium hover:text-[#EA2831] transition-colors" href="#fleet">Fleet</a>
             <a className="text-sm font-medium hover:text-[#EA2831] transition-colors" href="#testimonials">Reviews</a>
-            <button className="bg-[#EA2831] hover:bg-[#c91d24] text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+            <a 
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#EA2831] hover:bg-[#c91d24] text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+            >
               Book Now
-            </button>
+            </a>
           </div>
 
           <div className="md:hidden flex items-center">
@@ -36,11 +41,15 @@ const Navbar: React.FC = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-b border-gray-100 p-4 flex flex-col gap-4 animate-in slide-in-from-top duration-300">
           <a className="text-sm font-medium py-2" href="#services" onClick={() => setIsMenuOpen(false)}>Services</a>
-          <a className="text-sm font-medium py-2" href="#fleet" onClick={() => setIsMenuOpen(false)}>Fleet</a>
           <a className="text-sm font-medium py-2" href="#testimonials" onClick={() => setIsMenuOpen(false)}>Reviews</a>
-          <button className="bg-[#EA2831] text-white px-5 py-3 rounded-lg text-sm font-bold w-full">
+          <a 
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#EA2831] text-white px-5 py-3 rounded-lg text-sm font-bold w-full text-center"
+          >
             Book Now
-          </button>
+          </a>
         </div>
       )}
     </nav>
